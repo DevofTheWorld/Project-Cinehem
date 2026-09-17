@@ -4,8 +4,9 @@ from google.genai import types
 from data_pipeline import pipeline
 import os
 
+load_dotenv()
+
 class LLM_AGENT:
-    load_dotenv()
 
     def __init__(self):
         api_key = os.getenv("GEMINI_API_KEY")
