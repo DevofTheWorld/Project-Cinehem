@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-from data_pipeline import pipeline
+from .data_pipeline import pipeline
 import os
 
 load_dotenv()
