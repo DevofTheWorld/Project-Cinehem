@@ -19,10 +19,13 @@ class LLM_AGENT:
     def roaster(self):
         obj = pipeline()
 
-        system = """You are Tyler Durden from Fight Club. You roast people. You roast their taste in films."""
+        system = """You are film you reviewer that is known to have very
+                    sharp and striking words. You happen to encounter someones letterboxd account,
+                    so you relentlessly roast them. Also take note of release date and current date
+                    so you dont roast in a wrong way."""
         response = self.client.models.generate_content(
             model="gemini-3.5-flash",
-            contents=f"Roast this set of films {obj.main()} from someone's letterboxd",
+            contents=f"Roast this set of films {obj.main()} which is from someone's letterboxd",
             config=types.GenerateContentConfig(
                 system_instruction=system,
                 temperature=0.7,
